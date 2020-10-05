@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Smart Sensor Devices Web Bluetooth Example</title>
+    <meta charset="utf-8" />
+    <meta name="ssd" content="beaconexample" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+    <script>
+      // Redirect to HTTPS if HTTP is requested.
+      if (window.location.protocol === "http:") {
+        window.location.href = "https:" + window.location.href.substring(5);
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-9 caption">
+                <img src="images/logo.png" />
+                <h1>Bluetooth® low energy adapter</h1>
+                <a
+                  class="btn btn-info btn-lg"
+                  href="https://www.bleuio.com/"
+                  target="_blank"
+                  >Order Now</a
+                >
+              </div>
+              <div class="col-md-3">
+                <img
+                  src="images/bleuIO_white_withlogo.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-9 caption">
+                <img src="images/logo.png" />
+                <h1>Create your own BLE applications</h1>
+                <a
+                  class="btn btn-info btn-lg"
+                  href="https://www.bleuio.com/"
+                  target="_blank"
+                  >Order Now</a
+                >
+              </div>
+              <div class="col-md-3">
+                <img
+                  src="images/bleuIO_black_withlogo.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-9 caption">
+                <img src="images/logo.png" />
+                <h1>Quick, Innovative, Simple</h1>
+                <a
+                  class="btn btn-info btn-lg"
+                  href="https://www.bleuio.com/"
+                  target="_blank"
+                  >Order Now</a
+                >
+              </div>
+              <div class="col-md-3">
+                <img
+                  src="images/bleuIO_black_withlogo.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end carousel -->
+    </div>
+    <!-- end container -->
+    <div class="codesection">
+      <div class="container">
+        <h1>Web Bluetooth Example</h1>
+        <main class="main">
+          <div id="notSupported" class="hidden">
+            Sorry, <b>Web Serial</b> is not supported on this device, make sure
+            you're running Chrome 78 or later and have enabled the
+            <code>#enable-experimental-web-platform-features</code> flag in
+            <code>chrome://flags</code>
+          </div>
+
+          <br />
+          <button id="butConnect" type="button" class="btn btn-success">
+            Connect
+          </button>
+          <br /><br />
+          <button
+            id="butIbeacon"
+            type="button"
+            disabled
+            class="btn btn-warning"
+          >
+            Make iBeacon
+          </button>
+          <button id="butEddystone" type="button" disabled class="btn btn-info">
+            Make Eddystone Beacon
+          </button>
+          <button id="butScan" type="button" disabled class="btn btn-primary">
+            Scan BLE Devices
+          </button>
+
+          <pre id="log" class="mt-5"></pre>
+        </main>
+      </div>
+    </div>
+    <div class="footer text-center mt-3">
+      Powered by <a href="https://www.bleuio.com/" target="_blank">BleuIO</a> .
+      A product of
+      <a href="http://smartsensordevices.com/" target="_blank"
+        >Smart Sensor Devices</a
+      >
+    </div>
+
+    <!-- end container -->
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
