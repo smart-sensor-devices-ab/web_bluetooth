@@ -41,7 +41,7 @@
                   class="btn btn-info btn-lg"
                   href="https://www.bleuio.com/"
                   target="_blank"
-                  >Order Now</a
+                  >Learn More</a
                 >
               </div>
               <div class="col-md-3">
@@ -62,7 +62,7 @@
                   class="btn btn-info btn-lg"
                   href="https://www.bleuio.com/"
                   target="_blank"
-                  >Order Now</a
+                  >Learn More</a
                 >
               </div>
               <div class="col-md-3">
@@ -83,7 +83,7 @@
                   class="btn btn-info btn-lg"
                   href="https://www.bleuio.com/"
                   target="_blank"
-                  >Order Now</a
+                  >Learn More</a
                 >
               </div>
               <div class="col-md-3">
@@ -104,11 +104,16 @@
       <div class="container">
         <h1>Web Bluetooth Example</h1>
         <main class="main">
-          <div id="notSupported" class="hidden">
+          <div id="notSupported" class="hidden alert alert-danger">
             Sorry, <b>Web Serial</b> is not supported on this device, make sure
             you're running Chrome 78 or later and have enabled the
             <code>#enable-experimental-web-platform-features</code> flag in
-            <code>chrome://flags</code>
+            <code>chrome://flags</code> <br />
+            Open
+            <strong>
+              chrome://flags/#enable-experimental-web-platform-features</strong
+            >
+            in Google Chrome browser.
           </div>
 
           <br />
@@ -131,7 +136,7 @@
             Scan BLE Devices
           </button>
 
-          <pre id="log" class="mt-5"></pre>
+          <pre id="log" class="mt-5 d-none"></pre>
         </main>
       </div>
     </div>

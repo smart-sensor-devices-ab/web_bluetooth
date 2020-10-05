@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   butScan.addEventListener("click", clickScan);
   butConnect.addEventListener("click", clickConnect);
   const notSupported = document.getElementById("notSupported");
-  notSupported.classList.toggle("disabled", "serial" in navigator);
+  notSupported.classList.toggle("hidden", "serial" in navigator);
 });
 
 /**
@@ -127,6 +127,7 @@ function clickIbeacon() {
     butIbeacon.textContent = "Make iBeacon";
     butEddystone.removeAttribute("disabled");
     butScan.removeAttribute("disabled");
+    log.classList.toggle("d-none", false);
     //butEddystone.classList.toggle("disabled", false);
     //butScan.classList.toggle("disabled", false);
     isIbeaconAdv = false;
@@ -140,7 +141,7 @@ function clickIbeacon() {
   butIbeacon.textContent = "Stop Beacon";
   butEddystone.setAttribute("disabled", "true");
   butScan.setAttribute("disabled", "true");
-
+  log.classList.toggle("d-none", false);
   //butEddystone.classList.toggle("disabled", true);
   //butScan.classList.toggle("disabled", true);
   isIbeaconAdv = true;
@@ -174,6 +175,7 @@ function clickEddystone() {
   //butIbeacon.classList.toggle("disabled", true);
   butIbeacon.setAttribute("disabled", "true");
   butScan.setAttribute("disabled", "true");
+  log.classList.toggle("d-none", false);
 
   //butScan.classList.toggle("disabled", true);
   butEddystone.textContent = "Stop Beacon";
@@ -212,6 +214,7 @@ function clickScan() {
   //butEddystone.classList.toggle("disabled", true);
   butIbeacon.setAttribute("disabled", "true");
   butEddystone.setAttribute("disabled", "true");
+  log.classList.toggle("d-none", false);
 
   isScanning = true;
 }
